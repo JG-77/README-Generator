@@ -40,6 +40,31 @@ const questions= () => {
             message: 'What are the instructions for testing this app?',
             default: 'N/A',
           },
+          {
+            type: 'input', 
+            name: 'license',
+            message: 'What license will you be using for this app?',
+            choices: ['Apache License 2.0',
+                'GNU General Public License (GPL)',
+                'GNU Library or "Lesser" General Public License (LGPL)',
+                'GNU AGPLv3',
+                'MIT license',
+                'Boost Software License 1.0',
+                'The Unlicense',
+                'Mozilla Public License 2.0'],
+          },
+          {
+            type: 'input', 
+            name: 'github',
+            message: 'What is your GitHub username?',
+            default: 'N/A',
+          },
+          {
+            type: 'input', 
+            name: 'email',
+            message: 'What is your email?',
+            default: 'N/A',
+          },
     ]);
 };
 
