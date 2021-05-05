@@ -49,7 +49,7 @@ const askPromt= () => {
             type: 'checkbox', //or list??
             name: 'license',
             message: 'What license will you be using for this app?',
-            choices: ['Apache License 2.0','GNU General Public License (GPL)','GNU Library or "Lesser" General Public License (LGPL)','GNU AGPLv3','MIT license','Boost Software License 1.0','The Unlicense','Mozilla Public License 2.0'],
+            choices: ['Apache License 2.0','GNU General Public License (GPL)','GNU Library or "Lesser" General Public License (LGPL)','GNU AGPLv3','MIT license','Boost Software License 1.0','The Unlicense','Mozilla Public License 2.0','None (Unlicensed)'],
           },
           {
             type: 'input', 
