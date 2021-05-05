@@ -66,11 +66,15 @@ const askPromt= () => {
     ]);
 };
 
+//const writeToFile = (fileName, data) => {
+
+//}
 
 //function to initialize inquirer prompt
 const init = () => {
     askPromt()
-    .then((data) => writeToFile('README-Generated.md', generateMarkdown(data)))
+    //.then((data) => const filename = `${data.name.split(' ').join('')}.md`)
+    .then((data) => writeToFile('filename.md', generateMarkdown(data))) //replace 'filename.md with filename variable
     .then(() => console.log('Successfully generated README file'))
     .catch((err) => console.error(err));
 };
