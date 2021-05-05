@@ -4,10 +4,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
-//function using promise
+//function using promise to write README
 const writeToFile = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
+//Created an array prompt of questions for user input
 const askPromt= () => {
     return inquirer.prompt([
         {
@@ -46,17 +46,10 @@ const askPromt= () => {
             default: 'N/A',
           },
           {
-            type: 'checkbox', 
+            type: 'checkbox', //or list??
             name: 'license',
             message: 'What license will you be using for this app?',
-            choices: ['Apache License 2.0',
-                'GNU General Public License (GPL)',
-                'GNU Library or "Lesser" General Public License (LGPL)',
-                'GNU AGPLv3',
-                'MIT license',
-                'Boost Software License 1.0',
-                'The Unlicense',
-                'Mozilla Public License 2.0'],
+            choices: ['Apache License 2.0','GNU General Public License (GPL)','GNU Library or "Lesser" General Public License (LGPL)','GNU AGPLv3','MIT license','Boost Software License 1.0','The Unlicense','Mozilla Public License 2.0'],
           },
           {
             type: 'input', 
@@ -73,10 +66,8 @@ const askPromt= () => {
     ]);
 };
 
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
+//function to initialize inquirer prompt
 const init = () => {
     askPromt()
     .then((data) => writeToFile('README-Generated.md', generateMarkdown(data)))

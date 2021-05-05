@@ -50,9 +50,11 @@ function generateMarkdown(data) {
 
   ## Questions
 
+  ### For any Questions or concerns please reach out through the following contact info:
+
   - GitHub Profile: https://github.com/${data.github}
   
-  - Email: ${data.email}
+  - Email: <${data.email}>
 `; 
 } 
 
