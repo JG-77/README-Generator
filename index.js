@@ -1,9 +1,14 @@
-// TODO: Include packages needed for this application
+//Included packages needed for this application
+const generateMarkdown = require('./generateMarkdown');
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util');
+
+//function using promise
+const writeToFile = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
-const questions= () => {
+const askPromt= () => {
     return inquirer.prompt([
         {
             type: 'input', 
@@ -41,7 +46,7 @@ const questions= () => {
             default: 'N/A',
           },
           {
-            type: 'input', 
+            type: 'checkbox', 
             name: 'license',
             message: 'What license will you be using for this app?',
             choices: ['Apache License 2.0',
@@ -69,10 +74,15 @@ const questions= () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = () => {
+    askPromt()
+    .then((data) => writeToFile('README-Generated.md', generateMarkdown(data)))
+    .then(() => console.log('Successfully generated README file'))
+    .catch((err) => console.error(err));
+};
 
 // Function call to initialize app
 init();
