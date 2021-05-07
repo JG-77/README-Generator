@@ -49,12 +49,14 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 
-// function renderLicenseSection(license) {
-// }
+ function renderLicenseSection(license) {
+   if(license === 'None') {
+    return '';
+   }
+ }
 
 // Function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(data.license)
   return `# ${data.title} ${renderLicenseBadge(data.license)}
 
   ## Description
@@ -96,9 +98,13 @@ function generateMarkdown(data) {
   ## License
   ---
 
-  This application is covered by the following license: *${data.license}*. To read the full documentation and legal limitations of this license please click the folowing link below.
+  ${renderLicenseSection(data.license)} 
 
-  ${renderLicenseLink(data.license)} 
+  *${data.license}*
+
+   To read the full documentation and legal limitations of this license please click the folowing link below.
+   
+   ${renderLicenseLink(data.license)} 
 
   ## Questions
 
