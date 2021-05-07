@@ -2,10 +2,16 @@
 const generateMarkdown = require('./generateMarkdown');
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
+const path = require('path');
+//const util = require('util');
+
+
+//const writeToFile = util.promisify(fs.writeFile);
 
 //function using promise to write README
-const writeToFile = util.promisify(fs.writeFile);
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
 //Created an array prompt of questions for user input
 const askPromt= () => {
@@ -46,7 +52,7 @@ const askPromt= () => {
             default: 'N/A',
           },
           {
-            type: 'list', //or list??
+            type: 'list', 
             name: 'license',
             message: 'What license will you be using for this app?',
             choices: ['Apache License 2.0','GNU General Public License (GPL)','GNU Library or "Lesser" General Public License (LGPL)','GNU AGPLv3','MIT license','Boost Software License 1.0','The Unlicense','Mozilla Public License 2.0','None'],
@@ -69,7 +75,7 @@ const askPromt= () => {
 //function to initialize inquirer prompt
 const init = () => {
     askPromt()
-    .then((data) => writeToFile('README_.md', generateMarkdown(data))) //how do I generate to a new folder?
+    .then((data) => writeToFile('README_.md', generateMarkdown(data)))
     .then(() => console.log('Successfully generated README file'))
     .catch((err) => console.error(err));
 };

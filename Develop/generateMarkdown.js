@@ -55,7 +55,7 @@ function renderLicenseLink(license) {
    }else {
     return `## License
   ---
-    This application is covered by the following license: *${license}*. To read the full documentation and legal limitations of this license please click the folowing link below.
+  This application is covered by the following license: *${license}*. To read the full documentation and legal limitations of this license please click the folowing link below.
     `;
    }
  }
