@@ -4,12 +4,20 @@
 
 [GitHub Link](https://github.com/JG-77/readme-template-generator.git)
 
+### Screenshots of the application 
+
+![Node js generator](https://user-images.githubusercontent.com/76461629/117396063-0e285980-aeae-11eb-810d-e68d4694d7c0.png)
+
+![Node js Prompt](https://user-images.githubusercontent.com/76461629/117396076-141e3a80-aeae-11eb-8df2-023404595f89.png)
+
+![preview README](https://user-images.githubusercontent.com/76461629/117396090-1aacb200-aeae-11eb-8086-89ffa3febbd7.png)
+
+![Preview README 2](https://user-images.githubusercontent.com/76461629/117396106-213b2980-aeae-11eb-9372-434cc521262e.png)
+
 ## Description 
----
 The README-Template-Generator application allows users to easily generate a clean and organized README.md (markdown) file. Using Node.js and the Inquirer package, users can directly enter their input to answer each prompt question which will generate and format a new file for them! There is also the option to select a type of licensing that will display a license banner next to the title, and a license section in the README file will be created with the license information.
 
-## Technologies
---- 
+## Technologies 
 
 ## Node.js/Javascript
 
@@ -25,11 +33,9 @@ The README-Template-Generator application allows users to easily generate a clea
 * Exported generateMarkdown function
 
 ## Contact 
----
 Jessie Guadarrama: <jesguadarrama98@gmail.com>
 
 ## License
----
 [Node.js License](https://raw.githubusercontent.com/nodejs/node/master/LICENSE)
 
 Copyright Node.js contributors. All rights reserved.
