@@ -46,7 +46,7 @@ const askPromt= () => {
             default: 'N/A',
           },
           {
-            type: 'checkbox', //or list??
+            type: 'list', //or list??
             name: 'license',
             message: 'What license will you be using for this app?',
             choices: ['Apache License 2.0','GNU General Public License (GPL)','GNU Library or "Lesser" General Public License (LGPL)','GNU AGPLv3','MIT license','Boost Software License 1.0','The Unlicense','Mozilla Public License 2.0','None'],
@@ -69,7 +69,7 @@ const askPromt= () => {
 //function to initialize inquirer prompt
 const init = () => {
     askPromt()
-    .then((data) => writeToFile('README_.md', generateMarkdown(data))) 
+    .then((data) => writeToFile('README_.md', generateMarkdown(data))) //how do I generate to a new folder?
     .then(() => console.log('Successfully generated README file'))
     .catch((err) => console.error(err));
 };
