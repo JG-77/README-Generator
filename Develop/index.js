@@ -3,12 +3,8 @@ const generateMarkdown = require('./generateMarkdown');
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
-//const util = require('util');
 
-
-//const writeToFile = util.promisify(fs.writeFile);
-
-//function using promise to write README
+//function using fs and path to write README
 function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
@@ -72,7 +68,7 @@ const askPromt= () => {
     ]);
 };
 
-//function to initialize inquirer prompt
+//Created function to initialize inquirer prompt and create README in Generated folder
 const init = () => {
     askPromt()
     .then((data) => writeToFile('../../readme-template-generator/Generated/README_.md', generateMarkdown(data)))
