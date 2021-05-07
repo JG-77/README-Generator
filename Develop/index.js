@@ -75,7 +75,7 @@ const askPromt= () => {
 //function to initialize inquirer prompt
 const init = () => {
     askPromt()
-    .then((data) => writeToFile('README_.md', generateMarkdown(data)))
+    .then((data) => writeToFile('../../readme-template-generator/Generated/README_.md', generateMarkdown(data)))
     .then(() => console.log('Successfully generated README file'))
     .catch((err) => console.error(err));
 };
