@@ -4,6 +4,8 @@
 
 [GitHub Link](https://github.com/JG-77/readme-template-generator.git)
 
+[App Walkthrough Video](https://drive.google.com/file/d/1SsKpPRDeWVwYyi25Pezw_AzKoXLV_5Z5/view)
+
 ### Screenshots of the application 
 
 ![Node js generator](https://user-images.githubusercontent.com/76461629/117396063-0e285980-aeae-11eb-810d-e68d4694d7c0.png)
